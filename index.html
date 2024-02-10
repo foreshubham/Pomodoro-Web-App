@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-8N51Qg9MIg0XPiE90G2Xptsl/uC/3eb5MTDjJkH+HHwCXd+5XMUjtyN67T4ZhoEtkZlW4qkyd3p5l+ToRvFdsA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Pomodoro App</title>
+</head>
+<body>
+  <div class="container">
+    
+    <div class="container">
+        <div class="left-panel">
+          <h2>To-Do List</h2>
+          <ul id="taskList"></ul>
+          <input type="text" id="newTask" placeholder="Add a new task">
+          <button onclick="addTask()">Add Task</button>
+        </div>
+        <div class="right-panel">
+          <h1>Pomodoro Timer</h1>
+          <div id="timer">25:00</div>
+       
+          <button id="startBtn" onclick="startPomodoro()">Start</button>
+          <button id="pauseBtn" onclick="pausePomodoro()">Pause</button>
+          <button id="stopBtn" onclick="stopPomodoro()">Stop</button>
+          <button id="prevBtn" onclick="prevMusicTrack()">Previous</button>
+          <button id="nextBtn" onclick="nextMusicTrack()">Next</button>
+          <label for="volume">Volume:</label>
+          <input type="range" id="volume" min="0" max="1" step="0.1" value="1" oninput="setVolume()">
+        </div>
+      </div>
+  <audio id="backgroundAudio" loop>
+    <source src="" type="audio/mpeg">
+  </audio>
+  <script src="script.js"></script>
+</body>
+</html>
